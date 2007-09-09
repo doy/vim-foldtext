@@ -135,10 +135,6 @@ set foldmethod=marker
 " close a fold when I leave it
 set foldclose=all
 "}}}
-" Tags {{{
-set tags+='./.tags,.tags' " add .tags files
-set tags+='./../tags,../tags,./../.tags,../.tags' " look in the level above
-"}}}
 "}}}
 
 " Colors {{{
