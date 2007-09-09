@@ -271,6 +271,8 @@ map <home> g<home>
 map <end> g<end>
 " }}}
 "}}}
+" }}}
+
 " Plugin settings {{{
 " Enhanced Commentify {{{
 let g:EnhCommentifyBindInInsert = 'No'
@@ -297,6 +299,5 @@ if file_readable(s:session_file) && expand("%:.") !~ '^/'
     autocmd VimEnter * TlistDebug | exec 'TlistSessionLoad ' . s:session_file
     autocmd VimLeave * call delete(s:session_file) | exec 'TlistSessionSave ' . s:session_file
 endif
-" }}}
 " }}}
 " }}}
