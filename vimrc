@@ -243,7 +243,7 @@ function Perl_foldtext()
             endif
 
             " handle 'my ($a, $b) = @_;' type lines
-            let rest_line = matchlist(next_line, 'my (\(.*\)) = @_;')
+            let rest_line = matchlist(next_line, 'my\s*(\(.*\))\s*=\s*@_;')
             if !empty(rest_line)
                 let rest_params = split(rest_line[1], ',\s*')
                 let params += rest_params
@@ -251,7 +251,7 @@ function Perl_foldtext()
             endif
 
             " handle 'my %args = @_;' type lines
-            let hash_line = matchlist(next_line, 'my %\w+ = @_;')
+            let hash_line = matchlist(next_line, 'my\s*%\w\+\s*=\s*@_;')
             if !empty(hash_line)
                 let params += ['paramhash']
                 break
