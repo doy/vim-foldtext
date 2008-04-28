@@ -621,6 +621,7 @@ function Textobj(char, callback)
     exe 'xnoremap <silent>i'.a:char.' <Esc>:call Textobj_'.g:text_object_number.'(1, "v", v:prevcount, '.cbname.')<CR>'
 endfunction
 " }}}
+" Text objects {{{
 " / for regex {{{
 function Textobj_regex(inner, operator)
     let pos = getpos('.')
@@ -671,6 +672,7 @@ onoremap <silent>a/ <Esc>:<C-U>call Textobj_regex(0, v:operator)<CR>
 onoremap <silent>i/ <Esc>:<C-U>call Textobj_regex(1, v:operator)<CR>
 xnoremap <silent>a/ <Esc>:<C-U>call Textobj_regex(0, 'v')<CR>
 xnoremap <silent>i/ <Esc>:<C-U>call Textobj_regex(1, 'v')<CR>
+" }}}
 " }}}
 " }}}
 
