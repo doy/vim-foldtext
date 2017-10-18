@@ -1,3 +1,7 @@
+if exists('g:loaded_foldtext')
+    finish
+endif
+let g:loaded_foldtext = 1
 " Base {{{
 function Foldtext_base(...)
     " use the argument for display if possible, otherwise the current line {{{
